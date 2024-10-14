@@ -32,7 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 
-
+src/main/docker/prod/
 src/main/docker/postgres-data/
 src/main/docker/prod/postgres-data/
-src/main/docker/prod/
+
