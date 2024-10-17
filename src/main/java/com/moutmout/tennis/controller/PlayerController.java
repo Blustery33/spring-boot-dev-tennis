@@ -72,13 +72,11 @@ public class PlayerController {
     }
 
     @Operation(summary = "Update a player", description = "Update a player")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Update a player", content = {
-                    @Content(mediaType = "application/json", schema = @Schema(implementation = PlayerToSave.class))
-            }),
-            @ApiResponse(responseCode = "404", description = "Player with specified last name was not found.", content = {
-                    @Content(mediaType = "application/json", schema = @Schema(implementation = Error.class))
-            }),
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Update a player",
+                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = PlayerToSave.class))),
+            @ApiResponse(responseCode = "404", description = "Player with specified last name was not found.",
+                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = Error.class))),
             @ApiResponse(responseCode = "403", description = "This user is not authorized to perform this action.")
     })
     @PutMapping

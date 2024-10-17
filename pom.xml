@@ -94,6 +94,7 @@
 	</profiles>
 
 	<build>
+		<finalName>moutmout-tennis</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
